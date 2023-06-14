@@ -47,11 +47,11 @@ table {
 	border-spacing: 0;
 }
 
-/*
+
 *{
 	outline: 1px solid black;
 }
-*/
+
 
 *,*::before,*::after{
     box-sizing: border-box;
@@ -124,10 +124,41 @@ img{
 	white-space: nowrap;
 	padding: 9px 0 7px;
 }
+@media (max-width: 390px) {
+	.header{
+		flex-direction: column;
+	}
+	.header .header-logo{
+		position: relative;
+	}
+	.header .header-menu{
+		flex-direction: column;
+		width: 60%;
+		margin: 0 auto;
+	}
+	.header .header-shopcar{
+		bottom: 30px;
+	}
+}
 .banner{
+	/*
 	height: 496px;
 	background: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/banner.png?raw=true) center center no-repeat;
-	margin: 0px 0px 60px 0px;
+	*/
+	margin: 0px 42px 60px;
+}
+.banner img{
+	display: block;
+	max-width: 100%;
+	max-height: auto;
+}
+
+@media (max-width: 390px) {
+	.banner{
+		width: 94%;
+		height: auto;
+		margin: 0 3% 30px;
+	}
 }
 
 .content{
@@ -136,7 +167,11 @@ img{
 	max-width: 1024px;
 	padding: 0 42px 60px;
 }
-
+@media (max-width: 390px) {
+	.content{
+		padding: 0 3% 30px;
+	}
+}
 .content .content-choice{
 	width: 31.915%;
 }
@@ -159,6 +194,7 @@ img{
 	font-size: 24px;
 	font-weight: bold;
 	color: #3F5D45;
+	text-align: center;
 	opacity: 1;
 	text-decoration: none;
 	display: block;
@@ -166,6 +202,16 @@ img{
 }
 .content .content-choice ul li a:hover{
 	background: #EAF0ED;
+}
+@media (max-width: 390px) {
+	.content .content-choice .content-choice-title{
+		font-size: 14px;
+		line-height: 2.33;
+	}
+	.content .content-choice ul li a{
+		font-size: 14px;
+		line-height: 2.33;
+	}
 }
 .content .content-product{
 	width: 65.95745%;
@@ -198,6 +244,7 @@ img{
 }
 .content .content-product .content-product-item .content-product-favorite{
 	position: absolute;
+	display: block;
 	right: 7.33334%;
 	width: 6.699%;
 	background: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/favorite_border.png?raw=true) center center no-repeat ;
@@ -206,6 +253,7 @@ img{
 	white-space: nowrap;
 }
 .content .content-product .content-product-item li img{
+	display: block;
 	width: 100%;
 	height: auto;
 }
@@ -242,16 +290,48 @@ img{
 	color: #3F5D45;
 	background: #EAF0ED;
 }
+
+@media (max-width: 390px) {
+	.content .content-product .content-product-special{
+		font-size: 9.3px;
+		line-height: 2.33;
+		letter-spacing: 2.33px;
+		writing-mode: horizontal-tb;
+		padding: 0;
+		left: 5%;
+		top: 0%;
+	}
+	.content .content-product .content-product-item .content-product-favorite{
+		width: 20%;
+		height: 10%;
+	}
+	.content .content-product .content-product-title{
+		flex-direction: column;
+		line-height: 2.33;
+	}
+	.content .content-product .content-product-title .content-product-name{
+		width: 100%;
+		font-size: 11.66px;
+	}
+	.content .content-product .content-product-title .content-product-price{
+		width: 100%;
+		font-size: 11.66px;
+	}
+	.content .content-product .content-product-item li a{
+		font-size: 13.92px;
+		line-height: 2.33;
+	}
+}
+.content .content-product .content-product-nextbutton li{
+	width: 100%;
+	border-right: 1px solid #EAF0ED;
+}
 .content .content-product .content-product-nextbutton{
 	width: 48.3875%;
 	margin-top: 10px;
 	display: flex;
 	border: 1px solid #EAF0ED;
 	border-right: 0px;
-}
-.content .content-product .content-product-nextbutton li{
-	width: 100%;
-	border-right: 1px solid #EAF0ED;
 }
 .content .content-product .content-product-nextbutton .back a{
 	display: block;
@@ -281,6 +361,25 @@ img{
 .content .content-product .content-product-nextbutton .normal a:hover{
 	color: #EAF0ED;
 	background: #3F5D45;
+}
+@media (max-width: 390px) {
+	.content .content-product .content-product-nextbutton{
+		width: 100%;
+	}
+	.content .content-product .content-product-nextbutton .back a{
+		width: 100%;
+		height: 27.1833px;
+	}
+	.content .content-product .content-product-nextbutton .next a{
+		width: 100%;
+		height: 27.1833px;
+	}
+	.content .content-product .content-product-nextbutton .normal a{
+		width: 100%;
+		font-size: 11.66px;
+		line-height: 27.1833px;
+		font-weight: bold;
+	}
 }
 .footer{
 	background: #EAF0ED;
