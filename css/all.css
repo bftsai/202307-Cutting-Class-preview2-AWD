@@ -47,11 +47,11 @@ table {
 	border-spacing: 0;
 }
 
-
+/*
 *{
 	outline: 1px solid black;
 }
-
+*/
 
 *,*::before,*::after{
     box-sizing: border-box;
